@@ -4,6 +4,8 @@ class MagicColumn < ActiveRecord::Base
   has_many :magic_options
   has_many :magic_attributes, :dependent => :destroy
   
+  attr_accessible :name, :datatype, :pretty_name, :default, :is_required, :include_blank, :allow_other
+  
   validates_presence_of :name, :datatype
   validates_format_of :name, :with => /^[a-z][a-z0-9_]+$/
   
