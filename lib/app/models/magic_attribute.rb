@@ -1,5 +1,6 @@
 # Always work through the interface MagicAttribute.value
 class MagicAttribute < ActiveRecord::Base
+  attr_accessible :magic_column, :magic_option, :value
   belongs_to :magic_column
   belongs_to :magic_option
 
