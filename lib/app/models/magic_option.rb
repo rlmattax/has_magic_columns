@@ -1,4 +1,5 @@
 class MagicOption < ActiveRecord::Base
+  attr_accessible :magic_column, :value, :synonym
   belongs_to :magic_column
   
   validates_presence_of :value
